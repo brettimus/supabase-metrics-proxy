@@ -23,8 +23,8 @@ python3 -m venv venv
 pip3 install -r requirements.txt
 
 # Start the proxy so we can scrape metrics locally
-python3 app.py
+flask --app app.py --debug run
 
 # Boot up a local prometheus that scrapes this bad boi
-am start :5000
+am start http://127.0.0.1:5000
 ```
